@@ -1,2 +1,2 @@
 # usn-python
-Løsningsforslag til Python-uka, USN Kongsberg
+Løsningsforslag til Python intensivkurs ved USN Kongsberg

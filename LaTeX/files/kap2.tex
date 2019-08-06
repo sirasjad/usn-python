@@ -1,0 +1,115 @@
+\section{Løsningsforslag}
+I dette dokumentet finner du løsningsforslag og litt forklaring til alle oppgavene gitt i kompendiet skrevet av Joakim Bjørk, Børge Kile Gjelsten og Christian Scott.
+
+\subsection{Oppgave 2.2.1}
+\fcolorbox{black}{pink}{Hva blir 2*3-4/2*2, (1-3)*(-3)/(2*2), 2*3**2/2, 1/2**3-4-8/2*4, 2**3-(4-8)/2*4?}\\
+
+\textbf{Oppgaveløsning:}\\
+Vi setter alle regnestykkene i en {\ttfamily\textcolor{blue}{print()}} funksjon og får deretter resultatet.
+
+\begin{lstlisting}
+print(2 * (3-4) / 2 * 2)
+print((1-3) * (-3) / (2 * 2))
+print(2 * 3 ** (2/2))
+print((1/2) ** (3-4-8) / 2 * 4)
+print(2 ** 3- (4-8) / 2 * 4)
+\end{lstlisting}
+
+\subsection{Oppgave 2.2.2}
+\fcolorbox{black}{pink}{Regn ut arealet av en firkant med side a=3 og b=12.}\\
+
+\textbf{Oppgaveløsning:}\\
+Vi lager to variabler {\ttfamily a} og {\ttfamily b}, gir disse variablene en verdi, og deretter lager en ny variabel hvor disse to variablene ganges sammen. Til slutt ønsker vi å se resultatet, og det gjøres ved bruk av {\ttfamily\textcolor{blue}{print()}} funksjonen.
+
+\begin{lstlisting}
+a = 3
+b = 12
+firkant_arealet = a * b 
+print(firkant_arealet)
+\end{lstlisting}
+
+\subsection{Oppgave 2.2.3}
+\fcolorbox{black}{pink}{Regn ut omkretsen av en firkant med side a=4 og b=5.}\\
+
+\textbf{Oppgaveløsning:}\\
+Akkurat som forrige oppgave lager vi to variabler, gir disse egne verdier og deretter lager en tredje variabel hvor verdien av {\ttfamily a} og {\ttfamily b} adderes og multipliseres med 2, slik at vi får omkretsen av firkanten. Til slutt ønsker vi å se resultatet, og det gjøres ved bruk av {\ttfamily\textcolor{blue}{print()}} funksjonen.
+
+\begin{lstlisting}
+a = 4
+b = 5
+firkant_omkrets = 2 * (a+b)
+print(firkant_omkrets)
+\end{lstlisting}
+
+\subsection{Oppgave 2.2.4}
+\fcolorbox{black}{pink}{Løs 3x - 2 = 13}\\
+
+\textbf{Oppgaveløsning:}\\
+Vi flytter -2 over til høyre side av likhetstegnet og deretter deler hele likningen på 3, slik at {\ttfamily x} står alene. Til slutt ønsker vi å se resultatet, og det gjøres ved bruk av {\ttfamily\textcolor{blue}{print()}} funksjonen.
+
+\begin{lstlisting}
+x = (13+2) / 3
+print(x)
+\end{lstlisting}
+
+\subsection{Oppgave 2.2.5}
+\fcolorbox{black}{pink}{Regn ut omkretsen av en sirkel med radius 3. (Hva er radius? Og pi? Diskuter med sidemannen.)}\\
+
+\textbf{Oppgaveløsning:}\\
+Her bruker vi formel O = 2$\pi$r for å regne ut omkrets av sirkel. Vi begynner med å importere {\ttfamily math} modulen slik at vi får brukt matematiske funksjoner og begreper i koden vår. Vi bruker {\ttfamily math.pi} som returnerer verdien av Pi (3,1415926...) i koden vår. Variabel {\ttfamily r} er radiusen til sirkelen, og variabel {\ttfamily o} er omkretsen vår. Til slutt ønsker vi å se resultatet, og det gjøres ved bruk av {\ttfamily\textcolor{blue}{print()}} funksjonen.
+
+\begin{lstlisting}
+import math
+r = 3
+o = 2 * math.pi * r 
+print(o)
+\end{lstlisting}
+
+\subsection{Oppgave 2.3.1}
+\fcolorbox{black}{pink}{\parbox{\textwidth}{Du har to tekstvariabler, a = '7.3' og b = '30.1'. Bruk korrekt omgjøring av datatyper og finn så differansen (den ene minus den andre), summen og produktet (den ene ganget med den andre).}}\\\\
+
+\textbf{Oppgaveløsning:}\\
+Her er det viktig at vi konverterer variabel {\ttfamily a} og {\ttfamily b} til en float, siden vi har skrevet tallene i apostrof så betegnes disse som en string og ikke vanlig tall. Det er ikke logisk å utføre matematiske beregninger på en string (altså ren tekst), så derfor må vi omgjøre datatypen over til float, slik at programmet leser variablene som vanlige tall. Omgjøringen gjøres ved bruk av {\ttfamily\textcolor{blue}{float()}} funksjonen, og deretter kan vi gjøre diverse matematiske beregninger slik oppgaven spør om. Til slutt ønsker vi å se resultatet, og det gjøres ved bruk av {\ttfamily\textcolor{blue}{print()}} funksjonen.
+
+\begin{lstlisting}
+a = '7.3'
+b = '30.1'
+
+a = float(a)
+b = float(b)
+
+differanse = a - b
+sum = a + b
+produkt = a * b
+
+print(differanse)
+print(sum)
+print(produkt)
+\end{lstlisting}
+
+\subsection{Oppgave 2.3.2}
+\fcolorbox{black}{pink}{Du har c = '7.345'. Er det mulig å runde av tallet til to desimaler på bare en linje?)}\\
+
+\textbf{Oppgaveløsning:}\\
+Her oppstår samme problem som forrige oppgave, altså vi må omgjøre variabel {\ttfamily c} til en float, og deretter runde av tallet til to desimaler. Vi bruker {\ttfamily\textcolor{blue}{round()}} for å runde om tallene.
+
+\begin{lstlisting}
+c = '7.345'
+resultat = round(float(c), 2)
+print(resultat)
+\end{lstlisting}
+
+\subsection{Oppgave 2.3.3}
+\fcolorbox{black}{pink}{\parbox{\textwidth}{Du har en variabel a = 3.14 og b = "Pi er ". Lag en tekststreng c som kombinerer a og b og gir verdien "Pi er 3.14".}}\\\\
+
+\textbf{Oppgaveløsning:}\\
+Her løser vi oppgaven enkelt ved å lage en ny variabel som kombinerer variabel {\ttfamily a} og {\ttfamily b}. Før vi kan kombinere disse så må begge ha samme datatype, og siden {\ttfamily b} er en string så må {\ttfamily a} også omgjøres til en string. Dette kan gjøres ved bruk av {\ttfamily\textcolor{blue}{str()}} funksjonen.
+
+\begin{lstlisting}
+a = 3.14
+b = "Pi er "
+c = b + str(a)
+print(c)
+\end{lstlisting}
+
+Fortsettelse følger...
